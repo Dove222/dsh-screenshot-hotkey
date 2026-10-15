@@ -1,0 +1,50 @@
+{
+  "name": "dsh-screenshot-hotkey",
+  "version": "1.0.0",
+  "description": "DSH 截屏插件：全局快捷键（默认 Alt+A）、可自定义截图大小、截图后自动写入系统剪贴板",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "assets",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/schemastery": "*"
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.1"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "screenshot",
+    "clipboard"
+  ],
+  "license": "MIT",
+  "os": [
+    "win32"
+  ],
+  "author": "cgy520",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cgy520/dsh-screenshot-hotkey.git"
+  },
+  "homepage": "https://github.com/cgy520/dsh-screenshot-hotkey#readme",
+  "bugs": {
+    "url": "https://github.com/cgy520/dsh-screenshot-hotkey/issues"
+  }
+}

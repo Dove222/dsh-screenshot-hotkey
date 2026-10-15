@@ -1,0 +1,26 @@
+# dsh-screenshot-hotkey —— 向 DSH 组合树插入截屏插件行
+# 启用方式：dsh plugin --profile desktop add <本插件目录>  然后重启 DSH
+- insert:
+    - id: screenshot
+      name: dsh-screenshot-hotkey
+      config:
+        # 总开关
+        enabled: true
+        # 全局快捷键：Alt+A / Ctrl+Shift+S / Alt+Shift+A / F9 ...
+        hotkey: Alt+A
+        # region = Alt+A 后弹出全屏选区，可拖动/缩放到任意大小
+        # fixed  = 不弹选区，直接截取 width x height（以鼠标位置为中心）
+        mode: region
+        # 期望的截图大小（像素）。region 模式下作为初始选区大小；fixed 模式下就是最终大小
+        width: 0
+        height: 0
+        # 截图后写入系统剪贴板
+        copyToClipboard: true
+        # 另存为 PNG 的目录，留空表示只在剪贴板
+        saveDirectory: ''
+        # 覆盖层提示语言：zh / en
+        language: zh
+        # 截图成功后短暂闪烁提示
+        flash: true
+        # region 模式下松开鼠标立即截图（false = 松手后仍可用方向键微调大小，再按回车确认）
+        confirmOnRelease: false
